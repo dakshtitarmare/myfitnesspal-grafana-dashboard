@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" fill="none">
+  <rect width="1200" height="700" rx="32" fill="#F6F1E9"/>
+  <rect x="36" y="32" width="1128" height="78" rx="24" fill="#FFF8EF" stroke="#EADBC8"/>
+  <text x="72" y="80" fill="#8C3116" font-family="Arial, sans-serif" font-size="20" font-weight="700">MyFitnessPal CSV Analytics Dashboard</text>
+  <text x="72" y="104" fill="#63584D" font-family="Arial, sans-serif" font-size="16">Grafana overview embedded in the Next.js dashboard page</text>
+  <rect x="36" y="140" width="548" height="230" rx="28" fill="#FFFDF8" stroke="#E7D2BE"/>
+  <rect x="616" y="140" width="548" height="230" rx="28" fill="#FFFDF8" stroke="#E7D2BE"/>
+  <rect x="36" y="398" width="548" height="230" rx="28" fill="#FFFDF8" stroke="#E7D2BE"/>
+  <rect x="616" y="398" width="548" height="230" rx="28" fill="#FFFDF8" stroke="#E7D2BE"/>
+  <text x="68" y="178" fill="#1E1B18" font-family="Arial, sans-serif" font-size="18" font-weight="700">Calories per Day</text>
+  <text x="648" y="178" fill="#1E1B18" font-family="Arial, sans-serif" font-size="18" font-weight="700">Macronutrient Distribution</text>
+  <text x="68" y="436" fill="#1E1B18" font-family="Arial, sans-serif" font-size="18" font-weight="700">Meal Distribution</text>
+  <text x="648" y="436" fill="#1E1B18" font-family="Arial, sans-serif" font-size="18" font-weight="700">Weekly Calorie Trend</text>
+  <path d="M80 318C132 286 172 238 224 228C276 218 316 250 368 236C420 222 460 196 540 182" stroke="#D85C2E" stroke-width="6" stroke-linecap="round"/>
+  <path d="M660 322L660 240" stroke="#D85C2E" stroke-width="26" stroke-linecap="round"/>
+  <path d="M730 322L730 216" stroke="#4D7C63" stroke-width="26" stroke-linecap="round"/>
+  <path d="M800 322L800 256" stroke="#E4A246" stroke-width="26" stroke-linecap="round"/>
+  <path d="M874 322L874 206" stroke="#D85C2E" stroke-width="26" stroke-linecap="round"/>
+  <circle cx="240" cy="515" r="96" fill="#D85C2E" fill-opacity="0.85"/>
+  <path d="M240 419A96 96 0 0 1 326 565L240 515Z" fill="#4D7C63"/>
+  <path d="M240 515L326 565A96 96 0 0 1 182 592Z" fill="#E4A246"/>
+  <path d="M660 578C720 492 790 518 850 470C910 422 974 450 1118 418" stroke="#4D7C63" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="660" cy="578" r="8" fill="#4D7C63"/>
+  <circle cx="770" cy="518" r="8" fill="#4D7C63"/>
+  <circle cx="850" cy="470" r="8" fill="#4D7C63"/>
+  <circle cx="960" cy="450" r="8" fill="#4D7C63"/>
+  <circle cx="1118" cy="418" r="8" fill="#4D7C63"/>
+</svg>

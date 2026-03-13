@@ -1,0 +1,16 @@
+apiVersion: 1
+
+datasources:
+  - name: MyFitnessPal PostgreSQL
+    uid: postgres-myfitnesspal
+    type: postgres
+    access: proxy
+    url: postgres:5432
+    user: postgres
+    database: myfitnesspal
+    secureJsonData:
+      password: postgres
+    jsonData:
+      sslmode: disable
+      postgresVersion: 1600
+      timescaledb: false

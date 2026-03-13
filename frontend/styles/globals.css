@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+:root {
+  --bg: #f6f1e9;
+  --bg-accent: #f3d9b1;
+  --surface: rgba(255, 252, 247, 0.8);
+  --surface-strong: #fffaf2;
+  --text: #1e1b18;
+  --muted: #63584d;
+  --line: rgba(30, 27, 24, 0.12);
+  --brand: #d85c2e;
+  --brand-dark: #8c3116;
+  --success: #1d6d52;
+  --danger: #b53b29;
+  --shadow: 0 24px 80px rgba(98, 59, 32, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#__next {
+  margin: 0;
+  min-height: 100%;
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(216, 92, 46, 0.18), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(72, 107, 80, 0.2), transparent 30%),
+    var(--bg);
+  color: var(--text);
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.auth-page,
+.page-shell {
+  padding: 32px;
+}
+
+.auth-page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.topbar h1,
+.hero-card h1,
+.hero-card h2 {
+  margin: 8px 0 0;
+  line-height: 1.05;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-dark);
+}
+
+.lead {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.user-pill,
+.nav-actions a,
+.ghost-button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: rgba(255, 250, 242, 0.8);
+}
+
+.ghost-button,
+.primary-button {
+  cursor: pointer;
+}
+
+.primary-button {
+  padding: 14px 22px;
+  border: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--brand), #ef8d57);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 16px 32px rgba(216, 92, 46, 0.24);
+}
+
+.primary-button:disabled,
+.ghost-button:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.hero-card,
+.info-card,
+.grafana-frame-shell {
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+}
+
+.hero-card,
+.info-card {
+  border-radius: 28px;
+  padding: 28px;
+}
+
+.auth-card {
+  max-width: 720px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 24px;
+}
+
+.dashboard-grid {
+  grid-template-columns: 320px minmax(0, 1fr);
+}
+
+.upload-form {
+  margin-top: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.file-dropzone {
+  display: grid;
+  gap: 10px;
+  padding: 24px;
+  border-radius: 20px;
+  border: 2px dashed rgba(216, 92, 46, 0.35);
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.file-dropzone input {
+  padding: 12px 0;
+}
+
+.info-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.loader-shell {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  gap: 16px;
+  background: rgba(246, 241, 233, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 50;
+}
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 5px solid rgba(216, 92, 46, 0.2);
+  border-top-color: var(--brand);
+  animation: spin 0.9s linear infinite;
+}
+
+.grafana-frame-shell {
+  min-height: 75vh;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.grafana-frame {
+  width: 100%;
+  min-height: 75vh;
+  border: 0;
+  background: white;
+}
+
+.success-text {
+  color: var(--success);
+}
+
+.error-text {
+  color: var(--danger);
+}
+
+.hint-text {
+  color: var(--muted);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .page-shell,
+  .auth-page {
+    padding: 20px;
+  }
+
+  .topbar,
+  .card-grid,
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-actions {
+    width: 100%;
+  }
+
+  .grafana-frame-shell,
+  .grafana-frame {
+    min-height: 65vh;
+  }
+}
