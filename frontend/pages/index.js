@@ -10,7 +10,7 @@ export default function Home() {
 
   useEffect(() => {
     if (!loading) {
-      router.replace(user ? '/upload' : '/login');
+      router.replace( '/upload' );
     }
   }, [loading, router, user]);
 

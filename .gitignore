@@ -8,3 +8,5 @@ __pycache__/
 venv/
 postgres-data/
 grafana-data/
+gsoc-9c545-firebase-adminsdk-fbsvc-817e17f0aa.json
+firebase-service-account.json

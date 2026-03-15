@@ -28,6 +28,8 @@ export default function LoginPage() {
       setIsSubmitting(true);
       setError('');
       await signInWithPopup(auth, googleProvider);
+      localStorage.setItem(user.email);
+      localStorage.setItem(user.name);
       router.push('/upload');
     } catch (loginError) {
       setError(loginError.message || 'Google sign-in failed.');
