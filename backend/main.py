@@ -17,7 +17,7 @@ frontend_origins = [
     origin.strip()
     for origin in os.getenv(
         "FRONTEND_ORIGINS",
-        "http://localhost:3001,http://127.0.0.1:3001",
+        "http://localhost:3001,http://127.0.0.1:3001,http://localhost:3010,http://127.0.0.1:3010",
     ).split(",")
     if origin.strip()
 ]
@@ -25,7 +25,7 @@ frontend_origins = [
 app.add_middleware(
     CORSMiddleware,
     allow_origins=frontend_origins,
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )

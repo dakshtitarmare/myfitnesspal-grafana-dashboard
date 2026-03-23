@@ -7,10 +7,8 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    if (!loading) {
-      router.replace(user ? '/upload' : '/login');
-    }
-  }, [loading, router, user]);
+    router.replace('/upload');
+  }, [router]);
 
   return <Loader label="Preparing your workspace..." />;
 }

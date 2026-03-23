@@ -33,6 +33,16 @@ flowchart TD
 4. Backend preprocesses and inserts rows into `food_logs`.
 5. Open dashboard page to explore panels backed by PostgreSQL.
 
+## Screenshots
+
+### Upload Page
+
+![Upload page](docs/Screenshot%202026-03-23%20170856.png)
+
+### Dashboard Page
+
+![Dashboard page](docs/Screenshot%202026-03-23%20170919.png)
+
 ## Backend API
 
 - `GET /health`
