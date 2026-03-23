@@ -1,9 +1,14 @@
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile, status
 from sqlalchemy.orm import Session
 
-from ..csv_parser import CSVValidationError, parse_myfitnesspal_csv
-from ..database import get_db
-from ..models import FoodLog
+try:
+    from ..csv_parser import CSVValidationError, parse_myfitnesspal_csv
+    from ..database import get_db
+    from ..models import FoodLog
+except ImportError:
+    from csv_parser import CSVValidationError, parse_myfitnesspal_csv
+    from database import get_db
+    from models import FoodLog
 
 router = APIRouter(tags=["uploads"])
 

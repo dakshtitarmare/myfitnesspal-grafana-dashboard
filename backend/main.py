@@ -1,10 +1,15 @@
 import os
+import uvicorn
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from .database import Base, engine
-from .routers.uploads import router as uploads_router
+try:
+    from .database import Base, engine
+    from .routers.uploads import router as uploads_router
+except ImportError:
+    from database import Base, engine
+    from routers.uploads import router as uploads_router
 
 app = FastAPI(
     title="MyFitnessPal CSV Analytics API",
@@ -16,7 +21,7 @@ frontend_origins = [
     origin.strip()
     for origin in os.getenv(
         "FRONTEND_ORIGINS",
-        "http://localhost:3001,http://127.0.0.1:3001",
+        "http://localhost:3001,http://127.0.0.1:3001,http://localhost:3000",
     ).split(",")
     if origin.strip()
 ]
@@ -41,3 +46,7 @@ def health_check():
 
 
 app.include_router(uploads_router)
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000, reload=False)
